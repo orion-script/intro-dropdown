@@ -1,28 +1,79 @@
 $font-stack: Helvetica, sans-serif;
-$primary-color: #ff0000;
+$Almost-White: hsl(0, 0%, 98%);
+$Medium-Gray: hsl(0, 0%, 41%);
+$Almost-Black: hsl(0, 0%, 8%);
 
 main {
+    width: 100%;
+    height: 100%;
     font: 100% $font-stack;
-    background-color: $primary-color;
-}
+    background-color: $Almost-White;
 
-nav {
-    display: flex;
-    justify-content: space-between;
+    nav {
+        display: flex;
+        width: 100%;
+        height: 3rem;
+        justify-content: space-between;
+        align-items: center;
 
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            background-color: $Almost-White;
+            width: 40%;
+            height: 3rem;
+        }
 
-    li {
-        display: inline-block;
-    }
+        ul {
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
 
-    a {
-        display: block;
-        padding: 6px 12px;
-        text-decoration: none;
+        li {
+            display: inline-block;
+            align-items: center;
+
+            img {
+                margin-left: 0.2rem;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $Medium-Gray;
+        }
+
+        .nav-bar-button-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 13%;
+            height: 3rem;
+            padding: 0 2rem;
+            background-color: $Almost-White;
+
+            button {
+                padding: 0.5rem;
+                color: $Medium-Gray;
+            }
+
+            button:first-child {
+                border: none;
+                background-color: $Almost-White;
+            }
+
+            button:last-child {
+                background-color: $Almost-White;
+                border: 1.5px solid $Medium-Gray;
+                border-radius: 10px;
+            }
+        }
     }
 }
